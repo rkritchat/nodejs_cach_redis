@@ -3,8 +3,8 @@ const fetch = require('node-fetch')
 const redis = require('redis')
 
 const PORT = process.env.PORT || 5000
-const REDIS_PORT = process.env.REDIS_PORT || 6379
-const REDIS_URL = process.env.REDIS_URL || '172.17.0.2'
+const REDIS_PORT = process.env.REDIS_PORT || 6379  // defualt redis port on docker
+const REDIS_URL = process.env.REDIS_URL || '172.17.0.2' //docker ip
 const client = redis.createClient(REDIS_PORT, REDIS_URL)
 
 const app = express()
